@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dimple Surprise 💖</title>
+
+<style>
+body{
+margin:0;
+padding:0;
+background:#ffe6f0;
+font-family:Arial;
+text-align:center;
+overflow:hidden;
+}
+
+h1{
+color:#e60073;
+}
+
+input{
+padding:10px;
+border-radius:10px;
+border:1px solid pink;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:10px;
+background:#ff4da6;
+color:white;
+margin-top:10px;
+}
+
+#proposal{
+display:none;
+margin-top:20px;
+}
+
+.couple{
+margin-top:20px;
+}
+
+.boy,.girl{
+width:120px;
+animation: float 2s infinite alternate;
+}
+
+.flower{
+width:60px;
+margin-left:-30px;
+animation: give 2s infinite;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-10px);}
+}
+
+@keyframes give{
+0%{transform:scale(1);}
+50%{transform:scale(1.3);}
+100%{transform:scale(1);}
+}
+
+/* Confetti */
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+background:red;
+top:-10px;
+animation: fall 5s linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Enter Your Name 💖</h1>
+
+<input id="name" placeholder="Type Dimple">
+<br>
+<button onclick="show()">Continue</button>
+
+<div id="proposal">
+
+<h2 id="person"></h2>
+
+<p>
+Aap mere liye bahut special ho ❤️  
+Aapki simplicity mujhe bahut achhi lagti hai 🌸  
+Jab aap muskurati ho na, mera din ban jata hai 😊  
+Aap mere dil ke bahut kareeb ho 🌹  
+Har pal aapke saath special lagta hai 💕
+</p>
+
+<div class="couple">
+<img src="https://i.imgur.com/3XKQJ9P.png" class="boy">
+<img src="https://i.imgur.com/UqG3Q4A.png" class="girl">
+<img src="https://i.imgur.com/Wb6ZQpH.png" class="flower">
+</div>
+
+</div>
+
+<script>
+function show(){
+let n=document.getElementById("name").value;
+document.getElementById("proposal").style.display="block";
+document.getElementById("person").innerHTML="Dear "+n+" ❤️";
+confetti();
+}
+
+function confetti(){
+for(let i=0;i<40;i++){
+let d=document.createElement("div");
+d.className="confetti";
+d.style.left=Math.random()*100+"%";
+d.style.background="hsl("+Math.random()*360+",100%,70%)";
+d.style.animationDuration=(Math.random()*3+2)+"s";
+document.body.appendChild(d);
+}
+}
+</script>
+
+</body>
+</html>

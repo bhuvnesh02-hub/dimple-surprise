@@ -105,7 +105,18 @@ to{transform:translateY(100vh);}
 </style>
 </head>
 
-<body>
+<body><div class="rose">🌹</div>
+
+<script>
+for(let i=0;i<30;i++){
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"vw";
+c.style.background=`hsl(${Math.random()*360},100%,70%)`;
+c.style.animationDuration=3+Math.random()*3+"s";
+document.body.appendChild(c);
+}
+</script>
 
 <h1>Enter Your Name 💖</h1>
 

@@ -4,7 +4,32 @@
 <meta charset="UTF-8">
 <title>Dimple Surprise 💖</title>
 
-<style>
+<style>.couple{
+text-align:center;
+margin-top:20px;
+}
+
+.boy,.girl{
+width:120px;
+animation: float 2s infinite alternate;
+}
+
+.flower{
+width:60px;
+margin-left:-30px;
+animation: give 2s infinite;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-10px);}
+}
+
+@keyframes give{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
 body{
 margin:0;
 padding:0;
